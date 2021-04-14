@@ -88,7 +88,6 @@ def permutate(seed: Hashable, charset: str) -> str:
 
 
 if __name__ == '__main__':
-    # enigma = Enigma(('BFISJXDTVAKLZROWCYHQPNEMUG',))
     enigma = Enigma(rotor_seeds=('minecraft','dubstep','fruity loops'),
                     reflector_seed='sunlight')
     while True:
