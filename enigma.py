@@ -8,7 +8,7 @@ class Enigma:
         self.rotors = [Rotor(rotor_seed) for rotor_seed in rotor_seeds]
         self.reflector = Reflector(reflector_seed)
 
-    def __call__(self, message):
+    def __call__(self, message: str):
         output = ''
         for char in message:
             if char.isalpha():
@@ -35,7 +35,7 @@ class Enigma:
 
 
 class Reflector:
-    def __init__(self, seed, charset=string.ascii_uppercase):
+    def __init__(self, seed, charset: str = string.ascii_uppercase):
         self.linear_map = permutate(seed, charset)
         self.map_len = len(self.linear_map)
 
@@ -47,12 +47,12 @@ class Reflector:
 
 
 class Rotor:
-    def __init__(self, seed, charset=string.ascii_uppercase):
+    def __init__(self, seed, charset: str = string.ascii_uppercase):
         self.position = 0
         self.linear_map = permutate(seed, charset)
         self.map_len = len(self.linear_map)
 
-    def __call__(self, char: str, direction=1) -> str:
+    def __call__(self, char: str, direction: int = 1) -> str:
         ''' Passes character through self.
         '''
         char = char.upper()
