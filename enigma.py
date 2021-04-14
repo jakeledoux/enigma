@@ -72,7 +72,7 @@ class Rotor:
         self.position += 1
         return self.position % len(self.linear_map) // 2 == 0
 
-    def reset():
+    def reset(self):
         ''' Re-orients rotor to its original position.
         '''
         self.position = 0
