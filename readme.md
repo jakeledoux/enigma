@@ -64,7 +64,7 @@ so you can start over.
 'KWXL IHS YI ISS YPMUXKW'
 >>> enigma('Part two has a ttypo')
 'LRXH QNR UHC P SMOQP'
->>> e.reset()
+>>> enigma.reset()
 >>> enigma('Part one of the message')
 'KWXL IHS YI ISS YPMUXKW'
 >>> enigma('Part two has no typos')
